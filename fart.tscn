@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq1rfc7wo5d2t"]
+
+[ext_resource type="Texture2D" uid="uid://blks8yq7kr5ua" path="res://img/fart.png" id="1_ygghf"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tssn7"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 102.6
+flatness = 0.77
+gravity = Vector3(0, -98, 0)
+initial_velocity_min = 45.0
+initial_velocity_max = 135.0
+angular_velocity_max = 28.8
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.4
+scale_max = 0.8
+color = Color(0.92549, 0.976471, 0, 1)
+hue_variation_min = -0.03
+hue_variation_max = 0.1
+turbulence_noise_strength = 14.0
+turbulence_noise_scale = 8.5
+attractor_interaction_enabled = false
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+position = Vector2(0, 39)
+emitting = false
+amount = 2
+process_material = SubResource("ParticleProcessMaterial_tssn7")
+texture = ExtResource("1_ygghf")
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.34

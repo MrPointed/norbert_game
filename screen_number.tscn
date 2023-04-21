@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbixp0myikkk4"]
+
+[ext_resource type="FontFile" uid="uid://q0fi4k021ptb" path="res://gui/recharge bd.otf" id="1_i2ras"]
+[ext_resource type="Script" path="res://screen_number.gd" id="2_gty4b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0b4wb"]
+font = ExtResource("1_i2ras")
+font_size = 30
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label"]
+offset_right = 122.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_0b4wb")
+script = ExtResource("2_gty4b")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true

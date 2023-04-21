@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://33a2dsttl5u0"]
+
+[ext_resource type="PackedScene" uid="uid://bi227dq2uxn64" path="res://player.tscn" id="1_mppfx"]
+[ext_resource type="Script" path="res://main.gd" id="1_ryyr4"]
+[ext_resource type="Texture2D" uid="uid://wr14xwdhyxoq" path="res://gui/yellow_bg.jpeg" id="2_fgx0b"]
+[ext_resource type="PackedScene" uid="uid://f600xsaio1a" path="res://interface.tscn" id="3_d2q5e"]
+[ext_resource type="Texture2D" uid="uid://dnycmlee084wp" path="res://gui/marco.png" id="5_4wbld"]
+[ext_resource type="AudioStream" uid="uid://ct86hbpaeade4" path="res://songs/bite_sound.mp3" id="6_pgp6a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ly7wr"]
+size = Vector2(720, 40)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ryyr4")
+
+[node name="secondbg" type="Sprite2D" parent="."]
+modulate = Color(0.819608, 0.796078, 0.866667, 1)
+position = Vector2(359, 662.563)
+scale = Vector2(1.04375, 1.04)
+
+[node name="firstbg" type="Sprite2D" parent="."]
+position = Vector2(359, 662.563)
+scale = Vector2(1.04375, 1.04)
+texture = ExtResource("2_fgx0b")
+
+[node name="player" parent="." instance=ExtResource("1_mppfx")]
+position = Vector2(94, 972)
+
+[node name="Marco" type="Sprite2D" parent="."]
+modulate = Color(0.27451, 0.27451, 0.27451, 1)
+position = Vector2(360, 640)
+texture = ExtResource("5_4wbld")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(362, 1255)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_ly7wr")
+debug_color = Color(0.619608, 0.533333, 0.105882, 0.419608)
+
+[node name="spawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="energyTimer" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+
+[node name="interface" parent="." instance=ExtResource("3_d2q5e")]
+offset_right = 720.0
+offset_bottom = 1280.0
+
+[node name="background_song" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+autoplay = true
+
+[node name="eat_effect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_pgp6a")
+
+[node name="fart_sound" type="AudioStreamPlayer" parent="."]
+volume_db = 2.0

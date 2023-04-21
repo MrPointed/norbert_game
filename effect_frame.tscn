@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhb5ycer56ysw"]
+
+[ext_resource type="Texture2D" uid="uid://b3icrvjg7svtl" path="res://gui/effect_frame.png" id="1_3pe07"]
+[ext_resource type="Script" path="res://effect_frame.gd" id="2_dcd2t"]
+
+[node name="effect_frame" type="Sprite2D"]
+modulate = Color(100, 100, 100, 0)
+position = Vector2(357.5, 623.5)
+scale = Vector2(0.881, 1.08766)
+texture = ExtResource("1_3pe07")
+script = ExtResource("2_dcd2t")
+
+[node name="Timer" type="Timer" parent="."]

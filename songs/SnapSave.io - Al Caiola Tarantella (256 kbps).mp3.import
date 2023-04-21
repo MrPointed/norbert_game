@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sidlpy1wix02"
+path="res://.godot/imported/SnapSave.io - Al Caiola Tarantella (256 kbps).mp3-59504ecc8f90ceb835070e77d155d296.mp3str"
+
+[deps]
+
+source_file="res://songs/SnapSave.io - Al Caiola Tarantella (256 kbps).mp3"
+dest_files=["res://.godot/imported/SnapSave.io - Al Caiola Tarantella (256 kbps).mp3-59504ecc8f90ceb835070e77d155d296.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

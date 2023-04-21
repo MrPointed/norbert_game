@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c63gjdmge1c2e"
+path="res://.godot/imported/SnapSave.io - CARTOON MUNCH EATING (SOUND EFFECT) Original (256 kbps).mp3-61474626b79848430ee74fbd2ea2d76c.mp3str"
+
+[deps]
+
+source_file="res://songs/SnapSave.io - CARTOON MUNCH EATING (SOUND EFFECT) Original (256 kbps).mp3"
+dest_files=["res://.godot/imported/SnapSave.io - CARTOON MUNCH EATING (SOUND EFFECT) Original (256 kbps).mp3-61474626b79848430ee74fbd2ea2d76c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

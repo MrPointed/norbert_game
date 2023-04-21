@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://csw3s7hv0o40v"]
+
+[ext_resource type="Texture2D" uid="uid://oshh4er3wn7j" path="res://gui/gamover.png" id="1_2q1mp"]
+[ext_resource type="Script" path="res://game_over.gd" id="1_kvwsb"]
+[ext_resource type="Texture2D" uid="uid://bk7ueiho0igfn" path="res://gui/various_btn.png" id="2_qktqm"]
+[ext_resource type="FontFile" uid="uid://q0fi4k021ptb" path="res://gui/recharge bd.otf" id="3_4vqac"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5dop"]
+size = Vector2(128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c4ghs"]
+font = ExtResource("3_4vqac")
+font_size = 20
+font_color = Color(0.439216, 0.286275, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f8qde"]
+font = ExtResource("3_4vqac")
+
+[node name="game_over" type="MarginContainer"]
+offset_right = 720.0
+offset_bottom = 1280.0
+script = ExtResource("1_kvwsb")
+
+[node name="Gamover" type="Sprite2D" parent="."]
+position = Vector2(359, 615)
+texture = ExtResource("1_2q1mp")
+
+[node name="restart_btn" type="Area2D" parent="Gamover"]
+position = Vector2(155, 89)
+
+[node name="Sprite2D" type="Sprite2D" parent="Gamover/restart_btn"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_qktqm")
+region_enabled = true
+region_rect = Rect2(0, 0, 176.394, 180.231)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamover/restart_btn"]
+shape = SubResource("RectangleShape2D_b5dop")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="exit_btn" type="Area2D" parent="Gamover"]
+position = Vector2(-138, 87)
+
+[node name="Sprite2D" type="Sprite2D" parent="Gamover/exit_btn"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_qktqm")
+region_enabled = true
+region_rect = Rect2(-1.83363, 193.363, 178.377, 180.82)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamover/exit_btn"]
+shape = SubResource("RectangleShape2D_b5dop")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="gameover_lbl" type="Label" parent="Gamover"]
+offset_left = -108.0
+offset_top = -217.0
+offset_right = 28.0
+offset_bottom = -191.0
+scale = Vector2(1.24, 2.13261)
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_c4ghs")
+horizontal_alignment = 1
+
+[node name="score_lbl" type="Label" parent="Gamover"]
+offset_left = -66.0
+offset_top = -77.0
+offset_right = 61.0
+offset_bottom = -54.0
+scale = Vector2(1.15528, 1)
+text = "Score: xxxx"
+label_settings = SubResource("LabelSettings_f8qde")
+
+[node name="best_lbl" type="Label" parent="Gamover"]
+offset_left = -66.0
+offset_top = -39.0
+offset_right = 61.0
+offset_bottom = -16.0
+scale = Vector2(1.15528, 1)
+text = "Best: xxxx"
+label_settings = SubResource("LabelSettings_f8qde")

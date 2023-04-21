@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=3 uid="uid://f600xsaio1a"]
+
+[ext_resource type="Script" path="res://interface.gd" id="1_gkatb"]
+[ext_resource type="FontFile" uid="uid://q0fi4k021ptb" path="res://gui/recharge bd.otf" id="2_w6ptb"]
+[ext_resource type="Texture2D" uid="uid://u2ffbgyarq0x" path="res://gui/button.png" id="2_ylokr"]
+[ext_resource type="Texture2D" uid="uid://bsi0ia1jsvygo" path="res://gui/bar_holder.png" id="3_w5bul"]
+[ext_resource type="Texture2D" uid="uid://8ah3ro82xtvj" path="res://gui/life_bar.png" id="4_d0bc7"]
+[ext_resource type="Texture2D" uid="uid://cswurrbmhotu2" path="res://gui/life_icon.png" id="5_d7ya5"]
+[ext_resource type="Texture2D" uid="uid://c5pdf8ot565ec" path="res://gui/energy_bar.png" id="6_703q1"]
+[ext_resource type="Texture2D" uid="uid://c6klnu0ccy5kv" path="res://gui/energy_icon.png" id="7_m4cof"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b8m2u"]
+font = ExtResource("2_w6ptb")
+font_size = 20
+
+[node name="MarginContainer" type="MarginContainer"]
+custom_minimum_size = Vector2(720, 1280)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_gkatb")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+offset_right = 629.0
+offset_bottom = 28.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 300
+
+[node name="combo" type="Label" parent="HBoxContainer2"]
+offset_right = 170.0
+offset_bottom = 28.0
+text = "Combo: xxxx"
+label_settings = SubResource("LabelSettings_b8m2u")
+
+[node name="score" type="Label" parent="HBoxContainer2"]
+offset_left = 470.0
+offset_right = 629.0
+offset_bottom = 28.0
+text = "Score: xxxx"
+label_settings = SubResource("LabelSettings_b8m2u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 720.0
+offset_bottom = 1280.0
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+offset_top = 1026.0
+offset_right = 720.0
+offset_bottom = 1176.0
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="1" type="Button" parent="VBoxContainer/HBoxContainer"]
+offset_left = 7.0
+offset_right = 157.0
+offset_bottom = 150.0
+focus_mode = 0
+icon = ExtResource("2_ylokr")
+flat = true
+
+[node name="2" type="Button" parent="VBoxContainer/HBoxContainer"]
+offset_left = 192.0
+offset_right = 342.0
+offset_bottom = 150.0
+focus_mode = 0
+mouse_force_pass_scroll_events = false
+icon = ExtResource("2_ylokr")
+flat = true
+
+[node name="3" type="Button" parent="VBoxContainer/HBoxContainer"]
+offset_left = 377.0
+offset_right = 527.0
+offset_bottom = 150.0
+focus_mode = 0
+icon = ExtResource("2_ylokr")
+flat = true
+
+[node name="4" type="Button" parent="VBoxContainer/HBoxContainer"]
+offset_left = 562.0
+offset_right = 712.0
+offset_bottom = 150.0
+focus_mode = 0
+icon = ExtResource("2_ylokr")
+flat = true
+
+[node name="Container" type="Container" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+offset_top = 1180.0
+offset_right = 720.0
+offset_bottom = 1280.0
+
+[node name="BarHolder" type="Sprite2D" parent="VBoxContainer/Container"]
+position = Vector2(137, 50)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_w5bul")
+
+[node name="LifeBar" type="Sprite2D" parent="VBoxContainer/Container/BarHolder"]
+position = Vector2(44, -2)
+scale = Vector2(0.978642, 0.88)
+texture = ExtResource("4_d0bc7")
+
+[node name="LifeIcon" type="Sprite2D" parent="VBoxContainer/Container/BarHolder"]
+position = Vector2(-192, -4)
+scale = Vector2(0.560001, 0.56)
+texture = ExtResource("5_d7ya5")
+
+[node name="BarHolder2" type="Sprite2D" parent="VBoxContainer/Container"]
+position = Vector2(567, 50)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_w5bul")
+flip_h = true
+
+[node name="EnergyBar" type="Sprite2D" parent="VBoxContainer/Container/BarHolder2"]
+position = Vector2(-42.0001, -1.99976)
+scale = Vector2(0.947836, 0.854827)
+texture = ExtResource("6_703q1")
+
+[node name="EnergyIcon" type="Sprite2D" parent="VBoxContainer/Container/BarHolder2"]
+position = Vector2(194, 2)
+scale = Vector2(0.639996, 0.56001)
+texture = ExtResource("7_m4cof")
+
+[node name="EnergyButton" type="Button" parent="VBoxContainer/Container/BarHolder2"]
+offset_left = 154.0
+offset_top = -34.0
+offset_right = 162.0
+offset_bottom = -21.0
+scale = Vector2(9.56001, 5.96)
+focus_mode = 0
+flat = true

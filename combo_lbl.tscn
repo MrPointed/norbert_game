@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://drump4p50r22h"]
+
+[ext_resource type="FontFile" uid="uid://q0fi4k021ptb" path="res://gui/recharge bd.otf" id="1_dd3xj"]
+[ext_resource type="Script" path="res://combo_lbl.gd" id="2_q0jga"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3k0kx"]
+font = ExtResource("1_dd3xj")
+font_size = 40
+font_color = Color(0.843137, 0.839216, 0, 1)
+
+[node name="combo_lbl" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Good! x50"
+label_settings = SubResource("LabelSettings_3k0kx")
+script = ExtResource("2_q0jga")
